@@ -6,7 +6,7 @@ var express = require('express'),
   mongoose = require('mongoose');
 
 // APP CONFIG
-// mongoose.connect('mongodb://localhost/rest_blogapp', { useNewUrlParser: true });
+// mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 mongoose.connect(
   'mongodb://viralraval:rival5@ds217125.mlab.com:17125/restblogapp'
 );
