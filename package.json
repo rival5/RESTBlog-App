@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
+    "start-server": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Viral Raval",
@@ -16,5 +17,8 @@
     "express-sanitizer": "^1.0.4",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
