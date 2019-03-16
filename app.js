@@ -8,7 +8,7 @@ var express = require('express'),
 // APP CONFIG
 // mongoose.connect('mongodb://localhost/rest_blogapp', { useNewUrlParser: true });
 mongoose.connect(
-  'mongodb:viralraval:rival5@ds217125.mlab.com:17125/restblogapp'
+  'mongodb://viralraval:rival5@ds217125.mlab.com:17125/restblogapp'
 );
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
