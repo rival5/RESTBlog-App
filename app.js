@@ -5,12 +5,15 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose');
 
+const authRoutes = require('./routes/auth-routes');
+
 // APP CONFIG
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/auth', authRoutes);
 app.use(expressSanitizer());
 app.use(methodOverride('_method'));
 
@@ -27,7 +30,7 @@ var Blog = mongoose.model('Blog', blogSchema);
 // RESTFUL ROUTES
 
 app.get('/', function(req, res) {
-  res.redirect('/blogs');
+  res.render('login');
 });
 
 // INDEX ROUTE
