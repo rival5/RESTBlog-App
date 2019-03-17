@@ -6,9 +6,11 @@ var express = require('express'),
   mongoose = require('mongoose');
 
 const authRoutes = require('./routes/auth-routes');
+const passportService = require('./services/passport-setup');
 
 // APP CONFIG
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+const dburl = process.env.DATABASEURL;
+mongoose.connect(dburl, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
