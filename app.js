@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth-routes');
 const passportService = require('./services/passport-setup');
 
 // APP CONFIG
-const dburl = process.env.DATABASEURL;
+const dburl = process.env.DATABASEURL || 'mongodb://localhost/rest_blogapp';
 mongoose.connect(dburl, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
