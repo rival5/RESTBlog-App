@@ -5,11 +5,12 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose');
 
+const keys = require('./services/keys');
 const authRoutes = require('./routes/auth-routes');
 const passportService = require('./services/passport-setup');
 
 // APP CONFIG
-const dburl = process.env.DATABASEURL || 'mongodb://localhost/rest_blogapp';
+const dburl = process.env.DATABASEURL || keys.database.dbURI;
 mongoose.connect(dburl, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
