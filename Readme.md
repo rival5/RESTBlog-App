@@ -6,8 +6,10 @@
 
 `npm install`
 
-Start mongodb server in its own terminal tab.
-
 Run the app in its own terminal tab.
 
-`node app.js`
+`node app.js` or `npm start`
+
+Database is created and stored online in mLab.
+
+To see app in action go to - https://blog-app-vr.herokuapp.com/
